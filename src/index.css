@@ -213,12 +213,12 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 4rem;
+    padding-top: 5rem;
     padding-bottom: 4rem;
   }
   .container h3{
     /* outline: solid 2px red; */
-    margin-bottom: 0;
+    margin:0;
   }
   .form-container{
     /* outline: solid 2px red; */
