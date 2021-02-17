@@ -31,7 +31,7 @@ Variables
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-dark: #bb2525;
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
@@ -147,20 +147,25 @@ Color Generator
 .container {
   text-align: center;
   display: flex;
-  align-items: center;
+  align-items:center;
   justify-content: space-around;
   max-height: 100px;
-  padding: 4rem 2rem;
+  padding: 4rem;
+
   box-sizing: border-box;
+  /* outline:solid rgb(25, 0, 255) 1px; */
 }
 .container h3 {
   margin-bottom: 0;
   margin-right: 2rem;
+  /* align-self: center; */
+  /* padding-top: 0.75rem; */
+  /* outline:solid red 1px; */
 }
 .form-container{
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  padding-top: 2rem;
   /* outline:solid red 1px; */
 }
 form{
@@ -187,10 +192,14 @@ input {
   cursor: pointer;
 }
 @media screen and (max-width: 600px) {
- 
+  .container{
+    padding: 3rem 2rem 4rem 2rem;
+  }
   .container h3 {
     font-size:1.25rem;
-
+  }
+  .form-container{
+    padding-top: 2rem;
   }
   input,
   .btn {
@@ -199,7 +208,7 @@ input {
 }
 input.error {
   border: 2px solid var(--clr-red-dark);
-  margin-bottom:2rem;
+
 }
 
 .error-text{
@@ -207,9 +216,16 @@ input.error {
   font-size: 0.9rem;
   margin-top: 0.25rem;
   margin-bottom: 0;
-  opacity: 1;
+  opacity: 0;
   display: flex;
   color: var(--clr-red-light);
+
+}
+#error{
+  color: var(--clr-red-light);
+  opacity: 0.5;
+  margin-right: 0.25rem;
+  margin-top: 0.1rem;
 }
 .show-text{
   opacity: 1;
