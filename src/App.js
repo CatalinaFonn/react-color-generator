@@ -26,19 +26,23 @@ function App() {
   }
 
   return (
-    <>
+    <div className="section-wrapper">
       <section className="container">
         <h3>color generator</h3>
-        <form onSubmit={handleSubmit}>
-          <input 
-            type="text" 
-            placeholder="#f15025"
-            value={color} 
-            onChange={(e)=>setColor(e.target.value)}
-            className={`${error?'error' : null}`}
-          />
-          <button className="btn" type="submit">Submit</button>
-        </form>
+        <div className="form-container">
+          <form onSubmit={handleSubmit}>
+            <input 
+              type="text" 
+              placeholder="#f15025"
+              value={color} 
+              onChange={(e)=>setColor(e.target.value)}
+              className={`${error?'error' : null}`}
+            />
+            <button className="btn" type="submit">Submit</button>
+          </form>
+          <p className="error-text">Please enter valid value</p>
+        </div>
+        
       </section>
 
       <section className="colors">    
@@ -56,7 +60,7 @@ function App() {
           })
         }
       </section>
-    </>
+    </div>
   )
 }
 
